@@ -10,15 +10,8 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-        <meta charset="utf-8" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-          />
-          <meta name="theme-color" content="#000000" />
-          <link rel="shortcut icon" href="/images/favicon.ico" />
           <link rel="manifest" href="/manifest.webmanifest" />
-        <link href="/styles/index.css" rel="stylesheet" />
+          <link href="/styles/index.css" rel="stylesheet" />
           <link href="/styles/normalize.css" rel="stylesheet" />
         </Head>
         <body>

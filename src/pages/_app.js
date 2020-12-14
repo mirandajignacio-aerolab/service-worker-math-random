@@ -1,17 +1,30 @@
 // import App from 'next/app'
 
+import Head from 'next/head'
 import { useEffect } from "react"
 
 const MyApp = ({ Component, pageProps }) => {
   useEffect(() => {
-    console.log('miau')
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/service-worker.js')
       })
     }
   }, [])
-  return <Component {...pageProps} />
+  
+  return (
+    <>
+      <Head>
+        <meta name="viewport" content="viewport-fit=cover" />
+        <meta charset="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta name="theme-color" content="#000000" />
+      </Head>
+      <Component {...pageProps} />
+    </>)
 }
 
 // Only uncomment this method if you have blocking data requirements for

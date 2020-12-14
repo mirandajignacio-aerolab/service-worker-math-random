@@ -4,9 +4,9 @@ const Home = () => {
   const [client, setClient] = useState(false)
 
   useEffect(() => {
-setClient(true)
+    setClient(true)
   },[])
-  console.log('Home')
+
   return <div>
 
     {client && <><img
